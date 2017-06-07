@@ -5,10 +5,10 @@
 
     app.config(function($routeProvider) {
         $routeProvider
-            .when('/main', {
-                name: 'MainCtrl',
-                template: '<main-ctrl></main-ctrl>'
+            .when('/', {
+                name: '',
+                template: ''
             })
-            .otherwise({redirectTo: '/main'});
+            .otherwise({redirectTo: '/'});
     })
 })();
