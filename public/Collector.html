@@ -1,1 +1,12 @@
-<div>Double Test</div>
+<md-content layout-padding>
+    <form name = "passwordForm">
+        <md-input-container class = "md-block">
+            <label>Username</label>
+            <input md-maxlength="20" required name = "username" ng-model="pass.username">
+            <div ng-messages="passwordForm.username.$error">
+                <div ng-message="required">This is a required field.</div>
+                <div ng-message="md-maxlength">Your username cannot be longer than 20 characters.</div>
+            </div>
+        </md-input-container>
+    </form>
+</md-content>

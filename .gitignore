@@ -32,10 +32,10 @@ node_modules
 #Include these for gh-pages development
 data/
 bower_components
-app/bower_components
-app/frontend/bower_components
+public/bower_components
+public/frontend/bower_components
 dist/
-app/frontend_dist
+public/frontend_dist
 
 .idea
 

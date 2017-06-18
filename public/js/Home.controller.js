@@ -5,7 +5,7 @@
 
     app.controller('home', function($scope, $rootScope) {
         $scope.newPassword = function (input) {
-            alert(input);
+            //alert(input);
         }
     });
 })();
