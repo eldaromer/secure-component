@@ -4,6 +4,8 @@
     var app = angular.module('app');
 
     app.controller('home', function($scope, $rootScope) {
-        $scope.test = "world";
+        $scope.callHome = function () {
+            alert("alert");
+        }
     });
 })();
