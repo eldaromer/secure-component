@@ -10,9 +10,10 @@
             passUp: '&'
         },
         controller: function ($scope, $rootScope) {
+
             this.$onInit = function () {
                 console.log(this);
-                this.passUp();
+                this.passUp({password: "test"});
             }
         }
     });

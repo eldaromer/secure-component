@@ -4,8 +4,8 @@
     var app = angular.module('app');
 
     app.controller('home', function($scope, $rootScope) {
-        $scope.callHome = function () {
-            alert("alert");
+        $scope.newPassword = function (input) {
+            alert(input);
         }
     });
 })();
