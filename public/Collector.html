@@ -1,5 +1,5 @@
 <md-content layout-padding>
-    <form name = "passwordForm">
+    <form name = "passwordForm" novalidate>
         <md-input-container class = "md-block">
             <label>Username</label>
             <input md-maxlength="20" required name = "username" ng-model="pass.username">
@@ -9,10 +9,15 @@
             </div>
         </md-input-container>
         <md-input-container class = "md-block">
-            <input type = "password" md-maxlength="20" required name = "password" ng-model = "pass.password">
+            <label>Password</label>
+            <input type = "password" minlength="8" md-maxlength="20" required name = "password" ng-model = "pass.password" ng-change="validate()">
             <div ng-messages="passwordForm.password.$error" multiple md-auto-hide="false">
                 <div ng-message="required">This is a required field.</div>
                 <div ng-message="md-maxlength">Your password cannot be longer than 20 characters.</div>
+                <div ng-message="minlength">Your password must be longer than or equal to 8 characters.</div>
+                <div ng-message="digits">Your password must contain numeric digits.</div>
+                <div ng-message="alpha">Your password must contains alphanumeric characters.</div>
+                <div ng-message="user">Your password cannot contain your username.</div>
             </div>
         </md-input-container>
     </form>
