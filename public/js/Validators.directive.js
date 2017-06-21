@@ -1,9 +1,11 @@
 /* global angular */
 
+//IFFE, I use this to prevent global variable leaks.
 (function () {
     
     var app = angular.module('app');
 
+    //Add a validation directive to ensure the password has numeric digits in it
     app.directive('digits', function() {
         return {
             require: 'ngModel',
@@ -26,7 +28,8 @@
             }
         };
     });
-    
+
+    //Add a validation directive to ensure the password has alphabetic characters in it
     app.directive('alpha', function () {
         return {
             require: 'ngModel',
@@ -49,6 +52,7 @@
         };
     });
 
+    //Add a validation directive to ensure the password does not contain the username
     app.directive('user', function () {
         return {
             require: 'ngModel',
