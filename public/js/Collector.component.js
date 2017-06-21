@@ -9,14 +9,15 @@
         bindings: {
             passUp: '&'
         },
-        controller: function ($scope, $rootScope) {
+        controller: function ($scope, $http) {
 
-            this.$onInit = function () {
-                this.passUp({password: "test"});
-            };
+            var $ctrl = this;
 
             $scope.handle = function(username, password) {
-                console.log(username, password);
+                $ctrl.passUp({
+                    username: username,
+                    password: password
+                });
             }
         }
     });

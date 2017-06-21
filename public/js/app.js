@@ -1,7 +1,7 @@
 /* global angular */
 
 (function () {
-    var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages']);
+    var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages', 'md.data.table']);
 
     app.config(function($routeProvider) {
         $routeProvider
